@@ -1,0 +1,40 @@
+<div class="upload-container">
+
+    <h2>Upload Your EPUB</h2>
+
+    <p>
+        Drag & drop your EPUB file or browse from your computer.
+    </p>
+
+    <div class="drop-zone" id="dropZone">
+
+        <img src="assets/upload.svg" width="70">
+
+        <h3>Drop EPUB Here</h3>
+
+        <p>or</p>
+
+        <label class="browse-btn">
+
+            Browse Files
+
+            <input
+                type="file"
+                id="epubFile"
+                accept=".epub"
+                hidden
+            >
+
+        </label>
+
+        <div id="selectedFile"></div>
+
+    </div>
+
+    <button id="analyzeBtn">
+
+        Analyze Book
+
+    </button>
+
+</div>

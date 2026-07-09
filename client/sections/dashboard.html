@@ -1,0 +1,795 @@
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <div>
+
+                    <h2>BookForge</h2>
+
+                    <p>EPUB QA Platform</p>
+
+                </div>
+
+            </div>
+
+            <div class="sidebar-menu">
+
+                <a href="#" class="menu-item active" data-section="overview">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    Dashboard
+
+                </a>
+
+                <a href="#" class="menu-item" data-section="overview">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    Overview
+
+                </a>
+
+                <a href="#" class="menu-item" data-section="quality">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    Quality Report
+
+                </a>
+
+                <a href="#" class="menu-item" data-section="chapters">
+
+                    <i class="fa-solid fa-list"></i>
+
+                    Chapter Analysis
+
+                </a>
+
+                <a href="#" class="menu-item" data-section="issues">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    Issues
+
+                </a>
+
+                <a href="#" class="menu-item" data-section="recommendations">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    Recommendations
+
+                </a>
+
+                <a href="#" class="menu-item" data-section="export">
+
+                    <i class="fa-solid fa-file-export"></i>
+
+                    Export
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <div class="status-card">
+
+                <div class="status-dot"></div>
+
+                <div>
+
+                    <h4>Ready</h4>
+
+                    <p>Waiting for Analysis</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <main class="dashboard-main">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>EPUB Quality Dashboard</h1>
+
+                <p>Review EPUB metrics, quality checks, issues, and export options.</p>
+
+            </div>
+
+        </div>
+
+        <section id="overviewSection" class="dashboard-section active">
+
+            <div class="section-header">
+
+                <h2>Overview</h2>
+
+                <p class="section-description">High-level EPUB health metrics and book details.</p>
+
+            </div>
+
+            <div class="book-header">
+
+                <img src="assets/book.png" alt="Book Cover" class="book-cover-small">
+
+                <div class="book-header-info">
+
+                    <h1 id="bookTitle">Book Title</h1>
+
+                    <p id="bookAuthor">Author</p>
+
+                    <div class="book-meta">
+
+                        <span id="bookLanguage">N/A</span>
+
+                        <span id="epubVersion">EPUB 3.0</span>
+
+                        <span id="bookSize">--</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="summary-grid">
+
+                <div class="summary-card score-card">
+
+                    <div class="score-ring">
+
+                        <span id="overallScore">0</span>
+
+                    </div>
+
+                    <h3>Overall Score</h3>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <small>Grade</small>
+
+                    <h2 id="grade">-</h2>
+
+                    <p id="gradeDesc" class="section-description">-</p>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <small>Status</small>
+
+                    <h2 id="status">Pending</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <small>Chapters</small>
+
+                    <h2 id="chapterCount">0</h2>
+
+                </div>
+
+            </div>
+
+            <div class="section-header">
+
+                <h2>Quality Summary</h2>
+
+                <p class="section-description">Component-level quality scores with visual progress bars.</p>
+
+            </div>
+
+            <div class="quality-grid">
+
+                <div class="quality-card">
+
+                    <div class="quality-info">
+
+                        <div>
+
+                            <h4>Metadata</h4>
+
+                            <small>Book Metadata</small>
+
+                        </div>
+
+                        <h3 id="ov-metadataScore">0%</h3>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div id="ov-metadataBar" class="progress-fill"></div>
+
+                    </div>
+
+                    <small id="ov-metadataQuality" class="section-description">Needs Improvement</small>
+
+                </div>
+
+                <div class="quality-card">
+
+                    <div class="quality-info">
+
+                        <div>
+
+                            <h4>HTML</h4>
+
+                            <small>Content Structure</small>
+
+                        </div>
+
+                        <h3 id="ov-htmlScore">0%</h3>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div id="ov-htmlBar" class="progress-fill"></div>
+
+                    </div>
+
+                    <small id="ov-htmlQuality" class="section-description">Needs Improvement</small>
+
+                </div>
+
+                <div class="quality-card">
+
+                    <div class="quality-info">
+
+                        <div>
+
+                            <h4>CSS</h4>
+
+                            <small>Stylesheets</small>
+
+                        </div>
+
+                        <h3 id="ov-cssScore">0%</h3>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div id="ov-cssBar" class="progress-fill"></div>
+
+                    </div>
+
+                    <small id="ov-cssQuality" class="section-description">Needs Improvement</small>
+
+                </div>
+
+                <div class="quality-card">
+
+                    <div class="quality-info">
+
+                        <div>
+
+                            <h4>Images</h4>
+
+                            <small>Embedded Images</small>
+
+                        </div>
+
+                        <h3 id="ov-imageScore">0%</h3>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div id="ov-imageBar" class="progress-fill"></div>
+
+                    </div>
+
+                    <small id="ov-imagesQuality" class="section-description">Needs Improvement</small>
+
+                </div>
+
+                <div class="quality-card">
+
+                    <div class="quality-info">
+
+                        <div>
+
+                            <h4>Hyperlinks</h4>
+
+                            <small>Navigation Links</small>
+
+                        </div>
+
+                        <h3 id="ov-hyperlinkScore">0%</h3>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div id="ov-hyperlinkBar" class="progress-fill"></div>
+
+                    </div>
+
+                    <small id="ov-hyperlinksQuality" class="section-description">Needs Improvement</small>
+
+                </div>
+
+            </div>
+
+            <div class="info-grid">
+
+                <div class="dashboard-card">
+
+                    <div class="card-title">
+
+                        <h2>Book Information</h2>
+
+                    </div>
+
+                    <table class="info-table">
+
+                        <tr>
+
+                            <td>Title</td>
+
+                            <td id="ov-infoTitle">-</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Author</td>
+
+                            <td id="ov-infoAuthor">-</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Language</td>
+
+                            <td id="ov-infoLanguage">N/A</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>EPUB Version</td>
+
+                            <td id="ov-epubVersionTable">N/A</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Chapters</td>
+
+                            <td id="ov-chapterCountTable">0</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Images</td>
+
+                            <td id="ov-imageCount">0</td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Stylesheets</td>
+
+                            <td id="ov-cssCount">0</td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+                <div class="dashboard-card">
+
+                    <div class="card-title">
+
+                        <h2>Statistics</h2>
+
+                    </div>
+
+                    <div class="summary-grid">
+
+                        <div class="summary-card">
+
+                            <small>Images</small>
+
+                            <h2 id="statImageCount">0</h2>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <small>Stylesheets</small>
+
+                            <h2 id="statCssCount">0</h2>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <small>Links</small>
+
+                            <h2 id="statHyperlinkCount">0</h2>
+
+                        </div>
+
+                        <div class="summary-card">
+
+                            <small>Critical Issues</small>
+
+                            <h2 id="statCriticalCount">0</h2>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="qualitySection" class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>Quality Report</h2>
+
+                <p class="section-description">Detailed quality scores for EPUB components.</p>
+
+            </div>
+
+            <div class="quality-grid">
+
+                <div class="quality-card">
+
+                    <div class="quality-info">
+
+                        <div>
+
+                            <h4>Metadata</h4>
+
+                            <small>Book Metadata</small>
+
+                        </div>
+
+                        <h3 id="qr-metadataScore">0%</h3>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div id="qr-metadataBar" class="progress-fill"></div>
+
+                    </div>
+
+                    <small id="qr-metadataQuality" class="section-description">Needs Improvement</small>
+
+                </div>
+
+                <div class="quality-card">
+
+                    <div class="quality-info">
+
+                        <div>
+
+                            <h4>HTML</h4>
+
+                            <small>Content Structure</small>
+
+                        </div>
+
+                        <h3 id="qr-htmlScore">0%</h3>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div id="qr-htmlBar" class="progress-fill"></div>
+
+                    </div>
+
+                    <small id="qr-htmlQuality" class="section-description">Needs Improvement</small>
+
+                </div>
+
+                <div class="quality-card">
+
+                    <div class="quality-info">
+
+                        <div>
+
+                            <h4>CSS</h4>
+
+                            <small>Stylesheets</small>
+
+                        </div>
+
+                        <h3 id="qr-cssScore">0%</h3>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div id="qr-cssBar" class="progress-fill"></div>
+
+                    </div>
+
+                    <small id="qr-cssQuality" class="section-description">Needs Improvement</small>
+
+                </div>
+
+                <div class="quality-card">
+
+                    <div class="quality-info">
+
+                        <div>
+
+                            <h4>Images</h4>
+
+                            <small>Embedded Images</small>
+
+                        </div>
+
+                        <h3 id="qr-imageScore">0%</h3>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div id="qr-imageBar" class="progress-fill"></div>
+
+                    </div>
+
+                    <small id="qr-imagesQuality" class="section-description">Needs Improvement</small>
+
+                </div>
+
+                <div class="quality-card">
+
+                    <div class="quality-info">
+
+                        <div>
+
+                            <h4>Hyperlinks</h4>
+
+                            <small>Navigation Links</small>
+
+                        </div>
+
+                        <h3 id="qr-hyperlinkScore">0%</h3>
+
+                    </div>
+
+                    <div class="progress">
+
+                        <div id="qr-hyperlinkBar" class="progress-fill"></div>
+
+                    </div>
+
+                    <small id="qr-hyperlinksQuality" class="section-description">Needs Improvement</small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="chaptersSection" class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>Chapter Analysis</h2>
+
+                <p class="section-description">Performance and issue details for each chapter.</p>
+
+            </div>
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+
+                    <small>Total Chapters</small>
+
+                    <h2 id="totalChapters">0</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <small>Passed</small>
+
+                    <h2 id="passChapters">0</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <small>Warnings</small>
+
+                    <h2 id="warningChapters">0</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <small>Errors</small>
+
+                    <h2 id="errorChapters">0</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <small>Average Score</small>
+
+                    <h2 id="avgChapterScore">0%</h2>
+
+                </div>
+
+            </div>
+
+            <div id="chaptersContainer"></div>
+
+        </section>
+
+        <section id="issuesSection" class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>Issues</h2>
+
+                <p class="section-description">All EPUB issues categorized by severity.</p>
+
+            </div>
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+
+                    <small>Critical</small>
+
+                    <h2 id="critical-count">0</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <small>Warnings</small>
+
+                    <h2 id="warning-count">0</h2>
+
+                </div>
+
+                <div class="summary-card">
+
+                    <small>Information</small>
+
+                    <h2 id="info-count">0</h2>
+
+                </div>
+
+            </div>
+
+            <div class="info-grid">
+
+                <div class="dashboard-card">
+
+                    <div class="card-title">
+
+                        <h2>Critical Issues</h2>
+
+                    </div>
+
+                    <div id="criticalIssuesContainer" class="issues-list"></div>
+
+                </div>
+
+                <div class="dashboard-card">
+
+                    <div class="card-title">
+
+                        <h2>Warnings</h2>
+
+                    </div>
+
+                    <div id="warningIssuesContainer" class="issues-list"></div>
+
+                </div>
+
+                <div class="dashboard-card">
+
+                    <div class="card-title">
+
+                        <h2>Information</h2>
+
+                    </div>
+
+                    <div id="infoIssuesContainer" class="issues-list"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="recommendationsSection" class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>Recommendations</h2>
+
+                <p class="section-description">Suggested improvements to enhance EPUB quality.</p>
+
+            </div>
+
+            <div id="recommendationsContainer" class="recommendation-list"></div>
+
+            <button id="analyzeAnother" class="download-btn">Analyze Another EPUB</button>
+
+        </section>
+
+        <section id="exportSection" class="dashboard-section">
+
+            <div class="section-header">
+
+                <h2>Export</h2>
+
+                <p class="section-description">Export your EPUB quality report for sharing and review.</p>
+
+            </div>
+
+            <div class="download-card">
+
+                <div>
+
+                    <h2>Download the Report</h2>
+
+                    <p>Export the EPUB quality assurance report as a PDF.</p>
+
+                </div>
+
+                <button id="downloadPdf" class="download-btn">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    Download PDF
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>

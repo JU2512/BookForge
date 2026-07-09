@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" unique-identifier="PrimaryID" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dc:title>Alice's Adventures in Wonderland</dc:title>
+    <dc:language xsi:type="dcterms:RFC4646">en</dc:language>
+    <dc:creator opf:file-as="Carroll, Lewis" opf:role="aut">Lewis Carroll</dc:creator>
+    <dc:publisher>https://www.aliceandbooks.com</dc:publisher>
+    <dc:source>Wikisource</dc:source>
+    <dc:date opf:event="original-publication">1897</dc:date>
+    <dc:subject>Fiction</dc:subject>
+    <dc:subject>Fantasy</dc:subject>
+    <meta name="Sigil version" content="1.3.0" />
+    <dc:date opf:event="modification" xmlns:opf="http://www.idpf.org/2007/opf">2020-10-20</dc:date>
+    <dc:identifier id="PrimaryID" opf:scheme="URN">urn:uuid:61125464-1940-11e7-8e29-4c72b9252ec6</dc:identifier>
+    <meta name="cover" content="alice_in_wonderland-carroll.png" />
+  </metadata>
+  <manifest>
+    <item id="cover" href="cover.xml" media-type="application/xhtml+xml"/>
+    <item id="titlepage" href="title.xml" media-type="application/xhtml+xml"/>
+    <item id="main0" href="main0.xml" media-type="application/xhtml+xml"/>
+    <item id="main1" href="main1.xml" media-type="application/xhtml+xml"/>
+    <item id="main2" href="main2.xml" media-type="application/xhtml+xml"/>
+    <item id="main3" href="main3.xml" media-type="application/xhtml+xml"/>
+    <item id="main4" href="main4.xml" media-type="application/xhtml+xml"/>
+    <item id="main5" href="main5.xml" media-type="application/xhtml+xml"/>
+    <item id="main6" href="main6.xml" media-type="application/xhtml+xml"/>
+    <item id="main7" href="main7.xml" media-type="application/xhtml+xml"/>
+    <item id="main8" href="main8.xml" media-type="application/xhtml+xml"/>
+    <item id="main9" href="main9.xml" media-type="application/xhtml+xml"/>
+    <item id="main10" href="main10.xml" media-type="application/xhtml+xml"/>
+    <item id="main11" href="main11.xml" media-type="application/xhtml+xml"/>
+    <item id="ending.xml" href="ending.xml" media-type="application/xhtml+xml"/>
+    <item id="x1.ncx" href="1.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="se.css" href="css/se.css" media-type="text/css"/>
+    <item id="core.css" href="css/core.css" media-type="text/css"/>
+    <item id="logo.png" href="images/logo.png" media-type="image/png"/>
+    <item id="alice_in_wonderland-carroll.png" href="images/alice%20in%20wonderland-carroll.png" media-type="image/png"/>
+  </manifest>
+  <spine toc="x1.ncx">
+    <itemref idref="cover" linear="yes"/>
+    <itemref idref="titlepage" linear="yes"/>
+    <itemref idref="main0" linear="yes"/>
+    <itemref idref="main1" linear="yes"/>
+    <itemref idref="main2" linear="yes"/>
+    <itemref idref="main3" linear="yes"/>
+    <itemref idref="main4" linear="yes"/>
+    <itemref idref="main5" linear="yes"/>
+    <itemref idref="main6" linear="yes"/>
+    <itemref idref="main7" linear="yes"/>
+    <itemref idref="main8" linear="yes"/>
+    <itemref idref="main9" linear="yes"/>
+    <itemref idref="main10" linear="yes"/>
+    <itemref idref="main11" linear="yes"/>
+    <itemref idref="ending.xml" linear="yes"/>
+  </spine>
+  <guide>
+    <reference type="title-page" title="Title Page" href="title.xml"/>
+    <reference type="text" title="Main0" href="main0.xml"/>
+    <reference type="text" title="Main1" href="main1.xml"/>
+    <reference type="text" title="Main2" href="main2.xml"/>
+    <reference type="text" title="Main3" href="main3.xml"/>
+    <reference type="text" title="Main4" href="main4.xml"/>
+    <reference type="text" title="Main5" href="main5.xml"/>
+    <reference type="text" title="Main6" href="main6.xml"/>
+    <reference type="text" title="Main7" href="main7.xml"/>
+    <reference type="text" title="Main8" href="main8.xml"/>
+    <reference type="text" title="Main9" href="main9.xml"/>
+    <reference type="text" title="Main10" href="main10.xml"/>
+    <reference type="text" title="Main11" href="main11.xml"/>
+    <reference type="copyright-page" title="Feedbooks" href="ending.xml"/>
+    <reference type="cover" title="Cover" href="cover.xml"/>
+  </guide>
+</package>

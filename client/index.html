@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BookForge</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+
+<section id="landing">
+
+<nav>
+
+<div class="logo">
+
+<img src="assets/logo.png" alt="BookForge">
+
+<h2>
+Book<span>Forge</span>
+</h2>
+
+</div>
+
+<div class="nav-links">
+
+<a href="#">Home</a>
+
+<a href="#uploadPage">Analyze EPUBs</a>
+
+<a href="#">About</a>
+
+</div>
+
+</nav>
+
+<div class="hero">
+
+<div class="left">
+
+<span class="badge">
+
+Enterprise • Reliable • Secure
+
+</span>
+
+<h1>
+
+Professional EPUB
+
+<span>
+
+Validation Platform
+
+</span>
+
+</h1>
+
+<p>
+
+Validate EPUB metadata, HTML, CSS, images, hyperlinks,
+structure and publishing readiness with a professional
+quality analysis engine.
+
+</p>
+
+<div class="buttons">
+
+<button id="startBtn">
+
+Analyze EPUB
+
+</button>
+
+<button class="secondary">
+
+Learn More
+
+</button>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>Accurate Validation</h3>
+
+<p>Industry standard EPUB validation.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>Fast Analysis</h3>
+
+<p>Instant quality reports.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>Actionable Reports</h3>
+
+<p>Clear recommendations.</p>
+
+</div>
+
+<div class="feature">
+
+<h3>Secure Processing</h3>
+
+<p>Your files never leave your computer.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<img
+src="assets/book.png"
+class="hero-book"
+alt="Book Illustration"
+>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="uploadPage"></section>
+<section id="loadingPage">
+
+    <div class="loader-container">
+
+        <h2>Analyzing EPUB</h2>
+
+        <p id="loadingText">Preparing analysis...</p>
+
+        <div class="progress-bar">
+
+            <div id="progress"></div>
+
+        </div>
+
+        <ul class="analysis-list">
+
+            <li id="step1">Metadata</li>
+            <li id="step2">Manifest</li>
+            <li id="step3">HTML</li>
+            <li id="step4">CSS</li>
+            <li id="step5">Images</li>
+            <li id="step6">Hyperlinks</li>
+            <li id="step7">Generating Report</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<section id="dashboard"></section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
