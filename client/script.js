@@ -216,9 +216,14 @@ async function startAnalysis(file) {
         console.log("URL:", response.url);
 
         if (!response.ok) {
-            throw new Error("Backend returned an error.");
-        }
 
+            const errorText = await response.text();
+
+            console.error("Backend Error:");
+            console.error(errorText);
+
+            throw new Error(errorText);
+        }
         analysisResult = await response.json();
 
         console.log("===== JSON RECEIVED =====");
@@ -969,7 +974,7 @@ function setupDownloadHandler() {
                 '<i class="fa-solid fa-spinner fa-spin"></i> Generating PDF...';
 
             const response = await fetch(
-                "https://bookforge-api.onrender.com"
+                "https://bookforge-api.onrender.com/export/pdf"
             );
 
             if (!response.ok) {
