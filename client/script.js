@@ -219,10 +219,11 @@ async function startAnalysis(file) {
 
             const errorText = await response.text();
 
-            console.error("Backend Error:");
-            console.error(errorText);
+            alert(
+                `Status: ${response.status}\n\n${errorText}`
+            );
 
-            throw new Error(errorText);
+            return;
         }
         analysisResult = await response.json();
 
