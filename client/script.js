@@ -206,7 +206,7 @@ async function startAnalysis(file) {
     formData.append("file", file);
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/analyze", {
+        const response = await fetch("https://bookforge-api.onrender.com", {
             method: "POST",
             body: formData
         });
@@ -969,7 +969,7 @@ function setupDownloadHandler() {
                 '<i class="fa-solid fa-spinner fa-spin"></i> Generating PDF...';
 
             const response = await fetch(
-                "http://127.0.0.1:8000/export/pdf"
+                "https://bookforge-api.onrender.com"
             );
 
             if (!response.ok) {
