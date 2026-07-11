@@ -206,7 +206,7 @@ async function startAnalysis(file) {
     formData.append("file", file);
 
     try {
-        const response = await fetch("https://bookforge-api.onrender.com", {
+        const response = await fetch("https://bookforge-api.onrender.com/analyze", {
             method: "POST",
             body: formData
         });
